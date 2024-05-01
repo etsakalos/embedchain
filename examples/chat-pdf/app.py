@@ -87,8 +87,8 @@ with st.sidebar:
             st.stop()
     st.session_state["add_pdf_files"] = add_pdf_files
 
-st.title("📄 Embedchain - Chat with PDF")
-styled_caption = '<p style="font-size: 17px; color: #aaa;">🚀 An <a href="https://github.com/embedchain/embedchain">Embedchain</a> app powered by OpenAI!</p>'  # noqa: E501
+st.title("Chat with PDF")
+styled_caption = '<p style="font-size: 17px; color: #aaa;">Powered by OpenAI!</p>'  # noqa: E501
 st.markdown(styled_caption, unsafe_allow_html=True)
 
 if "messages" not in st.session_state:
@@ -96,8 +96,7 @@ if "messages" not in st.session_state:
         {
             "role": "assistant",
             "content": """
-                Hi! I'm chatbot powered by Embedchain, which can answer questions about your pdf documents.\n
-                Upload your pdf documents here and I'll answer your questions about them! 
+                Hi! I'm chatbot powered by OpenaAI, which can answer questions about your pdf documents.\n
             """,
         }
     ]
@@ -119,7 +118,7 @@ if prompt := st.chat_input("Ask me anything!"):
 
     with st.chat_message("assistant"):
         msg_placeholder = st.empty()
-        msg_placeholder.markdown("Thinking...")
+        msg_placeholder.markdown("GPU time...")
         full_response = ""
 
         q = queue.Queue()
