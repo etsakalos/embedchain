@@ -87,8 +87,8 @@ with st.sidebar:
             st.stop()
     st.session_state["add_pdf_files"] = add_pdf_files
 
-st.title("Chat with PDF")
-styled_caption = '<p style="font-size: 17px; color: #aaa;">Powered by OpenAI!</p>'  # noqa: E501
+st.title("RAG Chatbot")
+styled_caption = '<p style="font-size: 17px; color: #aaa;">Feel the AGI!</p>'  # noqa: E501
 st.markdown(styled_caption, unsafe_allow_html=True)
 
 if "messages" not in st.session_state:
@@ -96,7 +96,7 @@ if "messages" not in st.session_state:
         {
             "role": "assistant",
             "content": """
-                Hi! I'm chatbot powered by OpenaAI, which can answer questions about your pdf documents.\n
+                Hi! I'm chatbot powered by OpenaAI. Ask me anything.\n
             """,
         }
     ]
