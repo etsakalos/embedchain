@@ -55,8 +55,6 @@ def get_ec_app(api_key):
 
 with st.sidebar:
     openai_access_token = st.text_input("OpenAI API Key", key="api_key", type="password")
-    "WE DO NOT STORE YOUR OPENAI KEY."
-    "Just paste your OpenAI API key here and we'll use it to power the chatbot. [Get your OpenAI API key](https://platform.openai.com/api-keys)"  # noqa: E501
 
     if st.session_state.api_key:
         app = get_ec_app(st.session_state.api_key)
@@ -96,7 +94,7 @@ if "messages" not in st.session_state:
         {
             "role": "assistant",
             "content": """
-                Hi! I'm chatbot powered by OpenaAI. Ask me anything.\n
+                Hi! I'm chatbot powered by OpenaAI.\n
             """,
         }
     ]
